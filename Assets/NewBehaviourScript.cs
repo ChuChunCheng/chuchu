@@ -25,7 +25,7 @@ public class NewBehaviourScript : MonoBehaviour {
         golText.text = "";
 
         curr = DateTime.Now;
-        timeText.text = "60";
+        timeText.text = "30";
 	}
 	
 	// Update is called once per frame
@@ -37,9 +37,9 @@ public class NewBehaviourScript : MonoBehaviour {
         rb.AddForce(new Vector3(x, 0, z)*speed);
 
         TimeSpan ts = DateTime.Now - curr;
-        if (ts.Seconds < 60){
+        if (ts.Seconds < 30){
         
-        timeText.text = (60 - ts.Seconds).ToString();
+        timeText.text = (30 - ts.Seconds).ToString();
         }else{
             timeText.text = "0";
             golText.text = "You lose!";
@@ -47,16 +47,18 @@ public class NewBehaviourScript : MonoBehaviour {
 	}
     void OnTriggerEnter(Collider other)
     {
-        other.gameObject.SetActive(false);
-        count++;
-        countText.text = "分數:" + count.ToString();
-
-        if (count >= 10)
-        {
-            golText.text = "You win!";
-        }
         
 
+            other.gameObject.SetActive(false);
+            count++;
+            countText.text = "分數:" + count.ToString();
+
+            if (count >= 10)
+            {
+                golText.text = "You win!";
+            }
+
+        
 
     }
 }

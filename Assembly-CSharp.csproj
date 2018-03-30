@@ -50,6 +50,7 @@
      <Compile Include="Assets\Rotator.cs" />
      <Compile Include="Assets\cam.cs" />
      <Compile Include="Assets\changcam.cs" />
+     <Compile Include="Assets\cmd.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
